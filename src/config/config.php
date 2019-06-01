@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return array(
     */
 
     'js_build_path' => '/js/builds/',
-    'js_url_path' => '/js/builds/', 
+    'js_url_path' => '/js/builds/',
 
 	/*
     |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ return array(
     */
 
     'disable_mtime' => false,
-    'hash_salt' => '', 
+    'hash_salt' => '',
 
 	/*
     |--------------------------------------------------------------------------
@@ -80,5 +80,19 @@ return array(
     | value. By default if empty HTTP_HOST would be used.
     |
     */
-	'base_url' => ''
-);
+	'base_url' => '',
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Remove Old Files
+    |--------------------------------------------------------------------------
+    |
+    | Whether or not to remove old files in the build path for the requested
+    | build (the build identifier is simply a hash based on a concatenated string
+    | of all the filenames requested)
+    |
+    */
+    'remove_old_files' => true,
+
+];

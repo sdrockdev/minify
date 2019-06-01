@@ -58,6 +58,11 @@ abstract class BaseProvider implements Countable
     private $hash_salt;
 
     /**
+     * @var string
+     */
+    private $remove_old_files;
+
+    /**
      * @param null $publicPath
      */
     public function __construct($publicPath = null, $config = null, Filesystem $file = null)
@@ -66,8 +71,9 @@ abstract class BaseProvider implements Countable
 
         $this->publicPath = $publicPath ?: $_SERVER['DOCUMENT_ROOT'];
 
-        $this->disable_mtime = $config['disable_mtime'] ?: false;
-        $this->hash_salt = $config['hash_salt'] ?: '';
+        $this->disable_mtime = $config['disable_mtime'];
+        $this->hash_salt = $config['hash_salt'];
+        $this->remove_old_files = $config['remove_old_files'];
 
         $value = function($key)
         {
@@ -98,7 +104,10 @@ abstract class BaseProvider implements Countable
             return false;
         }
 
-        $this->removeOldFiles();
+        if ( $this->remove_old_files ) {
+            $this->removeOldFiles();
+        }
+
         $this->appendFiles();
 
         return true;
