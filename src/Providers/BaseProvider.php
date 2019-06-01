@@ -1,10 +1,10 @@
-<?php  namespace Devfactory\Minify\Providers;
+<?php  namespace Sdrockdev\Minify\Providers;
 
-use Devfactory\Minify\Exceptions\CannotRemoveFileException;
-use Devfactory\Minify\Exceptions\CannotSaveFileException;
-use Devfactory\Minify\Exceptions\DirNotExistException;
-use Devfactory\Minify\Exceptions\DirNotWritableException;
-use Devfactory\Minify\Exceptions\FileNotExistException;
+use Sdrockdev\Minify\Exceptions\CannotRemoveFileException;
+use Sdrockdev\Minify\Exceptions\CannotSaveFileException;
+use Sdrockdev\Minify\Exceptions\DirNotExistException;
+use Sdrockdev\Minify\Exceptions\DirNotWritableException;
+use Sdrockdev\Minify\Exceptions\FileNotExistException;
 use Illuminate\Filesystem\Filesystem;
 use Countable;
 
@@ -105,7 +105,7 @@ abstract class BaseProvider implements Countable
     /**
      * @param  $file
      * @return void
-     * @throws \Devfactory\Minify\Exceptions\FileNotExistException
+     * @throws \Sdrockdev\Minify\Exceptions\FileNotExistException
      */
     public function add($file)
     {
@@ -155,7 +155,7 @@ abstract class BaseProvider implements Countable
     }
 
     /**
-     * @throws \Devfactory\Minify\Exceptions\FileNotExistException
+     * @throws \Sdrockdev\Minify\Exceptions\FileNotExistException
      */
     protected function appendFiles()
     {
@@ -200,8 +200,8 @@ abstract class BaseProvider implements Countable
     }
 
     /**
-     * @throws \Devfactory\Minify\Exceptions\DirNotWritableException
-     * @throws \Devfactory\Minify\Exceptions\DirNotExistException
+     * @throws \Sdrockdev\Minify\Exceptions\DirNotWritableException
+     * @throws \Sdrockdev\Minify\Exceptions\DirNotExistException
      */
     protected function checkDirectory()
     {
@@ -309,7 +309,7 @@ abstract class BaseProvider implements Countable
     }
 
     /**
-     * @throws \Devfactory\Minify\Exceptions\CannotRemoveFileException
+     * @throws \Sdrockdev\Minify\Exceptions\CannotRemoveFileException
      */
     protected function removeOldFiles()
     {
@@ -330,7 +330,7 @@ abstract class BaseProvider implements Countable
     /**
      * @param $minified
      * @return string
-     * @throws \Devfactory\Minify\Exceptions\CannotSaveFileException
+     * @throws \Sdrockdev\Minify\Exceptions\CannotSaveFileException
      */
     protected function put($minified)
     {

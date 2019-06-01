@@ -1,3 +1,3 @@
-<?php  namespace Devfactory\Minify\Exceptions;
+<?php  namespace Sdrockdev\Minify\Exceptions;
 
 class CannotSaveFileException extends \Exception{}

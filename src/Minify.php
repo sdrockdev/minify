@@ -1,8 +1,8 @@
-<?php  namespace Devfactory\Minify;
+<?php  namespace Sdrockdev\Minify;
 
-use Devfactory\Minify\Exceptions\InvalidArgumentException;
-use Devfactory\Minify\Providers\JavaScript;
-use Devfactory\Minify\Providers\StyleSheet;
+use Sdrockdev\Minify\Exceptions\InvalidArgumentException;
+use Sdrockdev\Minify\Providers\JavaScript;
+use Sdrockdev\Minify\Providers\StyleSheet;
 use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
 use Request;
@@ -48,7 +48,7 @@ class Minify
    * @var bool
    */
   private $buildExtension;
-   
+
 
   /**
    * @param array $config
@@ -186,9 +186,9 @@ class Minify
     }
     else# if( $this->buildExtension == 'css')
     {
-        $buildPath =  isset($this->config['css_url_path']) ? $this->config['css_url_path'] : $this->buildPath;        
+        $buildPath =  isset($this->config['css_url_path']) ? $this->config['css_url_path'] : $this->buildPath;
     }
-    
+
     $filename = $baseUrl . $buildPath  . $this->provider->getFilename();
 
     if ($this->onlyUrl) {

@@ -1,6 +1,6 @@
-<?php namespace Devfactory\Minify\Providers;
+<?php namespace Sdrockdev\Minify\Providers;
 
-use Devfactory\Minify\Contracts\MinifyInterface;
+use Sdrockdev\Minify\Contracts\MinifyInterface;
 use JShrink\Minifier;
 
 class JavaScript extends BaseProvider implements MinifyInterface

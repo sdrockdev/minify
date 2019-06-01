@@ -1,8 +1,8 @@
 <?php
 
-namespace Devfactory\Minify\Providers;
+namespace Sdrockdev\Minify\Providers;
 
-use Devfactory\Minify\Contracts\MinifyInterface;
+use Sdrockdev\Minify\Contracts\MinifyInterface;
 use CssMinifier;
 
 class StyleSheet extends BaseProvider implements MinifyInterface
@@ -36,8 +36,8 @@ class StyleSheet extends BaseProvider implements MinifyInterface
 
     /**
      * Override appendFiles to solve css url path issue
-     * 
-     * @throws \Devfactory\Minify\Exceptions\FileNotExistException
+     *
+     * @throws \Sdrockdev\Minify\Exceptions\FileNotExistException
      */
     protected function appendFiles()
     {
@@ -68,7 +68,7 @@ class StyleSheet extends BaseProvider implements MinifyInterface
 
     /**
      * Css url path correction
-     * 
+     *
      * @param string $file
      * @return string
      */

@@ -27,9 +27,9 @@ Begin by installing this package through Composer.
 
 Then register the service provider and Facade by opening `config/app.php`
 
-    'Devfactory\Minify\MinifyServiceProvider',
+    'Sdrockdev\Minify\MinifyServiceProvider',
 
-    'Minify'        => 'Devfactory\Minify\Facades\MinifyFacade',
+    'Minify'        => 'Sdrockdev\Minify\Facades\MinifyFacade',
 
 
 Publish the config file:
