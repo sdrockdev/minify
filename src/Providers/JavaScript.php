@@ -1,4 +1,6 @@
-<?php namespace Sdrockdev\Minify\Providers;
+<?php
+
+namespace Sdrockdev\Minify\Providers;
 
 use Sdrockdev\Minify\Contracts\MinifyInterface;
 use JShrink\Minifier;

@@ -1,4 +1,6 @@
-<?php namespace Sdrockdev\Minify\Contracts;
+<?php
+
+namespace Sdrockdev\Minify\Contracts;
 
 interface MinifyInterface {
 

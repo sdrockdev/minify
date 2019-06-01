@@ -1,4 +1,6 @@
-<?php namespace spec\Sdrockdev\Minify\Providers;
+<?php
+
+namespace spec\Sdrockdev\Minify\Providers;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;

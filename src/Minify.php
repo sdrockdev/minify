@@ -1,4 +1,6 @@
-<?php  namespace Sdrockdev\Minify;
+<?php
+
+namespace Sdrockdev\Minify;
 
 use Sdrockdev\Minify\Exceptions\InvalidArgumentException;
 use Sdrockdev\Minify\Providers\JavaScript;

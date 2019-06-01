@@ -1,4 +1,6 @@
-<?php namespace Sdrockdev\Minify\Facades;
+<?php
+
+namespace Sdrockdev\Minify\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

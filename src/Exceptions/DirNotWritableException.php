@@ -1,3 +1,5 @@
-<?php  namespace Sdrockdev\Minify\Exceptions;
+<?php
+
+namespace Sdrockdev\Minify\Exceptions;
 
 class DirNotWritableException extends \Exception {}

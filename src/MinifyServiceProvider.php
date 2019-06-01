@@ -1,9 +1,12 @@
-<?php namespace Sdrockdev\Minify;
+<?php
+
+namespace Sdrockdev\Minify;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
-class MinifyServiceProvider extends ServiceProvider {
+class MinifyServiceProvider extends ServiceProvider
+{
 
   /**
    * Indicates if loading of the provider is deferred.
