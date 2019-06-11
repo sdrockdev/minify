@@ -2,17 +2,18 @@
 
 namespace Sdrockdev\Minify\Contracts;
 
-interface MinifyInterface {
+interface MinifyInterface
+{
 
     /**
      * @return mixed
      */
-    public function minify();
+    function minify();
 
     /**
      * @param  string $file
      * @param  array  $attributes
      * @return mixed
      */
-    public function tag($file, array $attributes);
+    function tag($file, array $attributes);
 }

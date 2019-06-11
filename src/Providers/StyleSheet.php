@@ -15,8 +15,7 @@ class StyleSheet extends BaseProvider implements MinifyInterface
     /**
      * @return string
      */
-    public function minify()
-    {
+    function minify() {
         $minified = new CssMinifier($this->appended);
 
         return $this->put($minified->getMinified());
@@ -27,9 +26,11 @@ class StyleSheet extends BaseProvider implements MinifyInterface
      * @param array $attributes
      * @return string
      */
-    public function tag($file, array $attributes = array())
-    {
-        $attributes = array('href' => $file, 'rel' => 'stylesheet') + $attributes;
+    function tag($file, array $attributes) {
+        $attributes = [
+            'href' => $file,
+            'rel'  => 'stylesheet',
+        ] + $attributes;
 
         return "<link {$this->attributes($attributes)}>" . PHP_EOL;
     }

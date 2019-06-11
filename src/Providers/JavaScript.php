@@ -15,8 +15,7 @@ class JavaScript extends BaseProvider implements MinifyInterface
     /**
      * @return string
      */
-    public function minify()
-    {
+    function minify() {
         $minified = Minifier::minify($this->appended);
 
         return $this->put($minified);
@@ -27,9 +26,10 @@ class JavaScript extends BaseProvider implements MinifyInterface
      * @param array $attributes
      * @return string
      */
-    public function tag($file, array $attributes)
-    {
-        $attributes = array('src' => $file) + $attributes;
+    function tag($file, array $attributes) {
+        $attributes = [
+            'src' => $file,
+        ] + $attributes;
 
         return "<script {$this->attributes($attributes)}></script>" . PHP_EOL;
     }

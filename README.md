@@ -57,14 +57,7 @@ You can use this Facade anywhere in your application
 			{!! Minify::stylesheet(array('/css/main.css', '/css/bootstrap.css'), array('foo' => 'bar')) !!}
 			// add full uri of the resource
 			{!! Minify::stylesheet(array('/css/main.css', '/css/bootstrap.css'))->withFullUrl() !!}
-		{!! Minify::stylesheet(array('//fonts.googleapis.com/css?family=Roboto')) !!}
-
-			// minify and combine all stylesheet files in given folder
-			{!! Minify::stylesheetDir('/css/') !!}
-			// add custom attributes to minify and combine all stylesheet files in given folder
-			{!! Minify::stylesheetDir('/css/', array('foo' => 'bar', 'defer' => true)) !!}
-			// minify and combine all stylesheet files in given folder with full uri
-			{!! Minify::stylesheetDir('/css/')->withFullUrl() !!}
+		    {!! Minify::stylesheet(array('//fonts.googleapis.com/css?family=Roboto')) !!}
 		</head>
 		...
 	</html>
@@ -84,17 +77,11 @@ You can use this Facade anywhere in your application
 		// or by passing multiple files
 		{!! Minify::javascript(array('/js/jquery.js', '/js/jquery-ui.js')) !!}
 		// add custom attributes
-		{!! Minify::javascript(array('/js/jquery.js', '/js/jquery-ui.js'), array('bar' => 'baz')) !!}
+		{!! Minify::javascript(array('/js/jquery.js', '/js/jquery-ui.js'), ['bar' => 'baz']) !!}
 		// add full uri of the resource
 		{!! Minify::javascript(array('/js/jquery.js', '/js/jquery-ui.js'))->withFullUrl() !!}
         {!! Minify::javascript(array('//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')) !!}
 
-		// minify and combine all javascript files in given folder
-		{!! Minify::javascriptDir('/js/') !!}
-		// add custom attributes to minify and combine all javascript files in given folder
-		{!! Minify::javascriptDir('/js/', array('bar' => 'baz', 'async' => true)) !!}
-		// minify and combine all javascript files in given folder with full uri
-		{!! Minify::javascriptDir('/js/')->withFullUrl() !!}
 	</html>
 
 ```
