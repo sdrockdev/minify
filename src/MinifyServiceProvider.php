@@ -43,12 +43,9 @@ class MinifyServiceProvider extends ServiceProvider
         $this->app->singleton( 'minify', function($app) {
             return new Minify([
                 'css_build_path'      => config('minify.css_build_path'),
-                'css_url_path'        => config('minify.css_url_path'),
                 'js_build_path'       => config('minify.js_build_path'),
-                'js_url_path'         => config('minify.js_url_path'),
                 'ignore_environments' => config('minify.ignore_environments'),
                 'base_url'            => config('minify.base_url'),
-                'reverse_sort'        => config('minify.reverse_sort'),
                 'disable_mtime'       => config('minify.disable_mtime'),
                 'hash_salt'           => config('minify.hash_salt'),
                 'remove_old_files'    => config('minify.remove_old_files'),

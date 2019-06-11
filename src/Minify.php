@@ -126,23 +126,13 @@ class Minify
             return $this->provider->tags($baseUrl, $this->attributes);
         }
 
-        $filename = $baseUrl . $this->_makeBuildPath() . $this->provider->getFilename();
+        $filename = $baseUrl . $this->buildPath . $this->provider->getFilename();
 
         if ( $this->onlyUrl ) {
             return $filename;
         }
 
         return $this->provider->tag($filename, $this->attributes);
-    }
-
-    protected function _makeBuildPath() {
-        if ( $this->buildExtension == 'js' ) {
-            return $this->config['js_url_path'] ?? $this->buildPath;
-        }
-
-        if ( $this->buildExtension == 'css' ) {
-            return $this->config['css_url_path'] ?? $this->buildPath;
-        }
     }
 
     /**
